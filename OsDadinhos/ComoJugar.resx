@@ -1,0 +1,148 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lbInstrucciones.Text" xml:space="preserve">
+    <value>El juego consiste en tirar dados por turnos.
+
+Cuando te toca, tiras 6 dados. El 5 y el 1 dan puntos siempre, 50 y 100 respectivamente, los demás no dan puntos por si solos.
+Si tocan tríos, cuartetos o mayores grupos de un mismo numero, darán puntos extra.
+Si sale un trío, ganaras 100 puntos multiplicado por el numero que salga (Ej. trío de 4, ganas 400 puntos, excepto el trío de 1 que daría 1000 puntos), si sale un cuarteto, seria el doble que un trío (Ej. cuarteto de 4, ganas 800 puntos; cuarteto de 1, ganas 2000 puntos), etc.
+Cuando te sale uno de estos casos que te dan puntos, podrás seleccionar los dados que quieres quedarte pulsando la tecla "enter" sobre cada uno, y luego puedes pulsar la tecla "E" para elegir si quedarte los puntos y tirar otra vez con los dados restantes que no te han dado puntos, o puedes pulsar la tecla "Q" para quedarte con los puntos y pasar turno.
+Si haces una tirada donde no aparece ninguna opción de puntuación, se acaba tu turno y pierdes los puntos acumulados ese turno.
+
+El objetivo es llegar a 2400 puntos antes que el rival para ganar.</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAPY6AQD2OgEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAISEhACEhIQAjIyMAISEhAiEhIQQhISEEISEhBCEhIQQhISEEISEhBCEh
+        IQQhISEEISEhBCEhIQQhISEEISEhBCEhIQQhISEEISEhBCEhIQQhISEEISEhBCEhIQMhISEAISEhACEh
+        IQAAAAAAAAAAAAAAAAAAAAAAAAAAACEhIQAhISEAISEhACEhIQMhISEAISEhACEhIQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEhIQAhISEAISEhACEh
+        IQAhISEAISEhAAAAAAAAAAAAAAAAAAAAAAAhISEAISEhACEhIQAhISECISEhACEhISQhISFRISEhUiEh
+        IVIhISFSISEhUiEhIVIhISFSISEhUiEhIVIhISFSISEhUiEhIVIhISFSISEhUiEhIVIhISFSISEhUiEh
+        IVUhISFEISEhAiEhIQAhISEAAAAAAAAAAAAAAAAAAAAAACEhIQAhISEAISEhASEhIQAhISF+ISEh/iEh
+        If8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEh
+        If8hISH/ISEh/SEhIf8hISFGISEhACEhIQMAAAAAAAAAAAAAAAAAAAAAICAgACEhIQMhISEAISEhTCEh
+        If8hISHzISEhqyEhIaAhISGiISEhoiEhIaIhISGiISEhoiEhIaIhISGiISEhoiEhIaIhISGiISEhoiEh
+        IaIhISGiISEhoiEhIaEhISGkISEhmCEhIRghISEAISEhAQAAAAAAAAAAAAAAAAAAAAAhISEAISEhBCEh
+        IQAhISGYISEh/yEhIYIhISEAISEhBSEhIQIhISECISEhAiEhIQIhISECISEhAiEhIQIhISECISEhAiEh
+        IQIhISECISEhAiEhIQIhISECISEhAiEhIQIhISEBISEhACEhIQAAAAAAAAAAAAAAAAAAAAAAAAAAACEh
+        IQAhISEDISEhACEhIaghISH/ISEh6iEhIe8hISHxISEh8SEhIfEhISHxISEh8SEhIfEhISHxISEh8SEh
+        IfEhISHxISEh8SEhIfEhISHxISEh8SEhIfEhISHwISEh8iEhIewhISEvISEhACEhIQIAAAAAAAAAAAAA
+        AAAAAAAAISEhACEhIQMhISEAISEhqSEhIf8hISH7ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEh
+        If8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH8ISEh/yEhIVYhISEAISEhBAAA
+        AAAAAAAAAAAAAAAAAAAhISEAISEhAyEhIQAhISGpISEh/yEhIfshISH+ISEh/iEhIf4hISH+ISEh/iEh
+        If4hISH+ISEh/iEhIf4hISH+ISEh/iEhIf4hISH+ISEh/iEhIf4hISH+ISEh/iEhIfshISH/ISEhVSEh
+        IQAhISEEAAAAAAAAAAAAAAAAAAAAACEhIQAhISEDISEhACEhIakhISH/ISEh+yEhIf8hISH/ISEh/yEh
+        If8hISH/ISEh/yEhIf8hISH8ISEh+yEhIf0hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/CEh
+        If8hISFWISEhACEhIQQAAAAAAAAAAAAAAAAAAAAAISEhACEhIQMhISEAISEhqSEhIf8hISH7ISEh/yEh
+        If8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEh
+        If8hISH8ISEh/yEhIVYhISEAISEhBAAAAAAAAAAAAAAAAAAAAAAhISEAISEhAyEhIQAhISGpISEh/yEh
+        IfshISH/ISEh/yEhIf8hISH/ISEh/yEhIf0hISH/ISEhqyEhIVchISHcISEh/yEhIf0hISH/ISEh/yEh
+        If8hISH/ISEh/yEhIfwhISH/ISEhViEhIQAhISEEAAAAAAAAAAAAAAAAAAAAACEhIQAhISEDISEhACEh
+        IakhISH/ISEh+yEhIf8hISH/ISEh/yEhIf8hISH+ISEh/yEhIfQhISEdISEhACEhIWMhISH/ISEh+yEh
+        If8hISH/ISEh/yEhIf8hISH/ISEh/CEhIf8hISFWISEhACEhIQQAAAAAAAAAAAAAAAAAAAAAISEhACEh
+        IQMhISEAISEhqSEhIf8hISH7ISEh/yEhIf8hISH/ISEh/yEhIf8hISH+ISEh/yEhIWUhISEFISEhqiEh
+        If8hISH8ISEh/yEhIf8hISH/ISEh/yEhIf8hISH8ISEh/yEhIVYhISEAISEhBAAAAAAAAAAAAAAAAAAA
+        AAAhISEAISEhAyEhIQAhISGpISEh/yEhIfshISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEh
+        If8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEhIfwhISH/ISEhViEhIQAhISEEAAAAAAAA
+        AAAAAAAAAAAAACEhIQAhISEDISEhACEhIakhISH/ISEh+yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/SEh
+        If8hISG8ISEhYSEhIeghISH/ISEh/iEhIf8hISH/ISEh/yEhIf8hISH/ISEh/CEhIf8hISFWISEhACEh
+        IQQAAAAAAAAAAAAAAAAAAAAAISEhACEhIQMhISEAISEhqSEhIf8hISH7ISEh/yEhIf8hISH/ISEh/yEh
+        If8hISH8ISEh/yEhIVohISEAISEhsCEhIf8hISH5ISEh/yEhIf8hISH/ISEh/yEhIf8hISH8ISEh/yEh
+        IVYhISEAISEhBAAAAAAAAAAAAAAAAAAAAAAhISEAISEhAyEhIQAhISGpISEh/yEhIfshISH/ISEh/yEh
+        If8hISH/ISEh/yEhIfshISH/ISEhXiEhIQAhISFXISEh3iEhIf8hISH9ISEh/yEhIf8hISH/ISEh/yEh
+        IfwhISH/ISEhViEhIQAhISEEAAAAAAAAAAAAAAAAAAAAACEhIQAhISEDISEhACEhIakhISH/ISEh+yEh
+        If8hISH/ISEh/yEhIf8hISH+ISEh+CEhIf8hISG8ISEhBSEhIQAhISECISEhjyEhIf8hISH9ISEh/yEh
+        If8hISH/ISEh/CEhIf8hISFWISEhACEhIQQAAAAAAAAAAAAAAAAAAAAAISEhACEhIQMhISEAISEhqSEh
+        If8hISH7ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/SEhIf8hISHYISEhYCEhIQMhISEAISEhyiEh
+        If8hISH9ISEh/yEhIf8hISH8ISEh/yEhIVYhISEAISEhBAAAAAAAAAAAAAAAAAAAAAAhISEAISEhAyEh
+        IQAhISGpISEh/yEhIfshISH/ISEh/yEhIf4hISH/ISEh6iEhIVwhISG9ISEh/yEhIfghISH/ISEhcSEh
+        IQAhISGKISEh/yEhIfshISH/ISEh/yEhIfwhISH/ISEhViEhIQAhISEEAAAAAAAAAAAAAAAAAAAAACEh
+        IQAhISEDISEhACEhIakhISH/ISEh+yEhIf8hISH/ISEh/CEhIf8hISG2ISEhACEhIUMhISH/ISEh/SEh
+        If8hISFUISEhACEhIZQhISH/ISEh+yEhIf8hISH/ISEh/CEhIf8hISFWISEhACEhIQQAAAAAAAAAAAAA
+        AAAAAAAAISEhACEhIQMhISEAISEhqSEhIf8hISH7ISEh/yEhIf8hISH+ISEh/yEhIekhISEXISEhACEh
+        ITIhISFdISEhLyEhIQAhISEUISEh4iEhIf8hISH9ISEh/yEhIf8hISH8ISEh/yEhIVYhISEAISEhBAAA
+        AAAAAAAAAAAAAAAAAAAhISEAISEhAyEhIQAhISGpISEh/yEhIfshISH/ISEh/yEhIf8hISH9ISEh/yEh
+        IbkhISEaISEhACEhIQIhISEAISEhISEhIcEhISH/ISEh/SEhIf8hISH/ISEh/yEhIfwhISH/ISEhViEh
+        IQAhISEEAAAAAAAAAAAAAAAAAAAAACEhIQAhISEDISEhACEhIakhISH/ISEh+yEhIf8hISH/ISEh/yEh
+        If8hISH+ISEh/yEhIfMhISHBISEhrCEhIcEhISH2ISEh/yEhIf4hISH/ISEh/yEhIf8hISH/ISEh/CEh
+        If8hISFVISEhACEhIQQAAAAAAAAAAAAAAAAAAAAAISEhACEhIQMhISEAISEhqSEhIf8hISH8ISEh/yEh
+        If8hISH/ISEh/yEhIf8hISH9ISEh/iEhIf8hISH/ISEh/yEhIf4hISH9ISEh/yEhIf8hISH/ISEh/yEh
+        If8hISH8ISEh/yEhIVUhISEAISEhBAAAAAAAAAAAAAAAAAAAAAAhISEAISEhBCEhIQAhISGcISEh/yEh
+        IfohISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH+ISEh/CEhIfshISH8ISEh/iEhIf8hISH/ISEh/yEh
+        If8hISH/ISEh/yEhIfshISH/ISEhSSEhIQAhISEDAAAAAAAAAAAAAAAAAAAAACEhIQAhISEDISEhACEh
+        IU0hISH/ISEh/SEhIfwhISH8ISEh/CEhIfwhISH8ISEh/CEhIfwhISH8ISEh/CEhIfwhISH8ISEh/CEh
+        IfwhISH8ISEh/CEhIfwhISH7ISEh/yEhIeEhISEPISEhACEhIQEAAAAAAAAAAAAAAAAAAAAAISEhACEh
+        IQAhISEBISEhACEhIX4hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEhIf8hISH/ISEh/yEh
+        If8hISH/ISEh/yEhIf8hISH/ISEh/iEhIf8hISHpISEhPyEhIQAhISECISEhAAAAAAAAAAAAAAAAAAAA
+        AAAhISEAISEhACEhIQAhISECISEhACEhISUhISFVISEhViEhIVYhISFWISEhViEhIVYhISFWISEhViEh
+        IVYhISFWISEhViEhIVYhISFWISEhViEhIVYhISFXISEhSyEhIREhISEAISEhASEhIQAhISEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAhISEAISEhACEhIQAhISECICAgACEhIQAhISEAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEhIQAhISEAISEhASEhIQIhISEAISEhACEh
+        IQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhISEAHx8fADExMQAhISECISEhBCEhIQQhISEEISEhBCEh
+        IQQhISEEISEhBCEhIQQhISEEISEhBCEhIQQhISEEISEhBCEhIQQhISEEISEhBCEhIQQhISEBISEhACEh
+        IQAhISEAAAAAAAAAAAAAAAAA9gAAC+i//8vqAAAL5AAAC+gAAAvIgAAXyAAAC8gAAAvIAAALyAAAC8gA
+        AAvIAAALyACAC8gAAAvIAAALyAAAC8gAgAvIAIALyABAC8gAEAvIABALyAQQC8gCIAvIAUALyAAAC8gA
+        AAvIAAAL6AAAC+QAABPqAAAr6L/+l/YAAC8=
+</value>
+  </data>
+</root>
