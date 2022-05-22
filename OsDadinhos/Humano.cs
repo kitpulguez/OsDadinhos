@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace OsDadinhos
 {
-    class Humano:Jugador
+    public class Humano:Jugador
     {
-        public Humano():this("")
+        public Humano():this("", null)
         { }
 
-        public Humano(string nombre):base(nombre)
+        public Humano(string nombre, List<Dado> dadosPropios):base(nombre, dadosPropios)
         { }
 
-        public override void SeleccionarDado()
+        /*public override void SeleccionarDado()
         {
 
-        }
+        }*/
 
         public override void PuntuarYPasar()
         {

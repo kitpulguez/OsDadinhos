@@ -13,13 +13,13 @@ namespace OsDadinhos
     public partial class MenuInicio : Form
     {
         ComoJugar ventanaComoJugar;
-        Partida ventanaPartida;
+        SeleccionarNombre ventanaSeleccionarNombre;
 
         public MenuInicio()
         {
             InitializeComponent();
             ventanaComoJugar = new ComoJugar();
-            ventanaPartida = new Partida();
+            ventanaSeleccionarNombre = new SeleccionarNombre();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace OsDadinhos
 
         private void BtUnJugador(object sender, EventArgs e)
         {
-            ventanaPartida.ShowDialog();
+            ventanaSeleccionarNombre.ShowDialog();
         }
 
         private void BtComoJugar(object sender, EventArgs e)

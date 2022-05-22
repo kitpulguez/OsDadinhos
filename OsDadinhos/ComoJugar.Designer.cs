@@ -56,7 +56,7 @@ namespace OsDadinhos
             this.lbInstrucciones.Location = new System.Drawing.Point(36, 118);
             this.lbInstrucciones.MaximumSize = new System.Drawing.Size(1409, 0);
             this.lbInstrucciones.Name = "lbInstrucciones";
-            this.lbInstrucciones.Size = new System.Drawing.Size(1409, 448);
+            this.lbInstrucciones.Size = new System.Drawing.Size(1407, 544);
             this.lbInstrucciones.TabIndex = 1;
             this.lbInstrucciones.Text = resources.GetString("lbInstrucciones.Text");
             this.lbInstrucciones.Click += new System.EventHandler(this.label1_Click);

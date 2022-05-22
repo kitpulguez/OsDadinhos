@@ -6,35 +6,75 @@ using System.Threading.Tasks;
 
 namespace OsDadinhos
 {
-    abstract class Jugador
+    public abstract class Jugador
     {
         string nombre;
         int turnos, puntos;
+        List<Dado> dadosPropios;
 
-        public Jugador() : this("")
+        public Jugador() : this("", null)
         {
 
         }
 
-        public Jugador(string nombre)
+        public Jugador(string nombre, List<Dado> dadosPropios)
         {
             this.nombre = nombre;
-            turnos = 0;
+            turnos = 1;
             puntos = 0;
+            this.dadosPropios = dadosPropios;
         }
 
-        public void TirarDados(List<Dado> listaDeDados)
+        public void SumarTurno()
         {
-            foreach (Dado dado in listaDeDados)
+            turnos++;
+        }
+
+        public void TirarDados()
+        {
+            foreach (Dado dado in dadosPropios)
             {
                 if (!dado.GetRecogido())
                     dado.RandomNumber();
             }
+
+            ActualizarImagenesDados();
         }
 
-        public abstract void SeleccionarDado();
+        public void ActualizarImagenesDados()
+        {
+            foreach (Dado dado in dadosPropios)
+            {
+                switch (dado.GetNumero())
+                {
+                    case 1:
+                        dado.GetImagen().Load("../../../../../imagenes/1_dot.png");
+                        break;
+                    case 2:
+                        dado.GetImagen().Load("../../../../../imagenes/2_dots.png");
+                        break;
+                    case 3:
+                        dado.GetImagen().Load("../../../../../imagenes/3_dots.png");
+                        break;
+                    case 4:
+                        dado.GetImagen().Load("../../../../../imagenes/4_dots.png");
+                        break;
+                    case 5:
+                        dado.GetImagen().Load("../../../../../imagenes/5_dots.png");
+                        break;
+                    case 6:
+                        dado.GetImagen().Load("../../../../../imagenes/6_dots.png");
+                        break;
+                }
+            }
+        }
 
         public abstract void PuntuarYPasar();
+
+        public void SumarPuntos(int puntazos)
+        {
+            puntos += puntazos;
+        }
 
         public void SetNombre(string nombre)
         {
@@ -66,6 +106,14 @@ namespace OsDadinhos
             return puntos;
         }
 
+        public void SetListaDeDados(List<Dado> listaDeDados)
+        {
+            dadosPropios = listaDeDados;
+        }
 
+        public List<Dado> GetListaDeDados()
+        {
+            return dadosPropios;
+        }
     }
 }

@@ -58,15 +58,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lbInstrucciones.Text" xml:space="preserve">
-    <value>El juego consiste en tirar dados por turnos.
+    <value>El juego consiste en tirar dados por turnos y llegar a cierta puntuacion para ganar.
 
-Cuando te toca, tiras 6 dados. El 5 y el 1 dan puntos siempre, 50 y 100 respectivamente, los demás no dan puntos por si solos.
+Reglas:
+El 5 y el 1 dan puntos siempre, 50 y 100 respectivamente, los demás no dan puntos por si solos.
 Si tocan tríos, cuartetos o mayores grupos de un mismo numero, darán puntos extra.
 Si sale un trío, ganaras 100 puntos multiplicado por el numero que salga (Ej. trío de 4, ganas 400 puntos, excepto el trío de 1 que daría 1000 puntos), si sale un cuarteto, seria el doble que un trío (Ej. cuarteto de 4, ganas 800 puntos; cuarteto de 1, ganas 2000 puntos), etc.
-Cuando te sale uno de estos casos que te dan puntos, podrás seleccionar los dados que quieres quedarte pulsando la tecla "enter" sobre cada uno, y luego puedes pulsar la tecla "E" para elegir si quedarte los puntos y tirar otra vez con los dados restantes que no te han dado puntos, o puedes pulsar la tecla "Q" para quedarte con los puntos y pasar turno.
-Si haces una tirada donde no aparece ninguna opción de puntuación, se acaba tu turno y pierdes los puntos acumulados ese turno.
+Si no te sale en una tirada ningun dado que puntue, pierdes el turno y los puntos que hayas acumulado.
+Cuando te toca, puedes pulsar el boton de "Tirar" para tirar los dados. 
+Cuando te sale uno de estos casos que te dan puntos, puedes clickear el dado para seleccionarlo, haciendo esto con todos los que quieras que puntuen. Cuando termines, puedes elegir entre clickear "Acumular y tirar" para acumular los puntos que te dan esos dados y tirar los que no te daban puntos otra vez, para poder ganar mas puntos, o puedes clickear "Puntuar y pasar", para asegurarte los puntos y pasar el turno.
+Una vez que pases el turno o lo pierdas, le tocara al rival, que hara este mismo proceso.
 
-El objetivo es llegar a 2400 puntos antes que el rival para ganar.</value>
+El objetivo es llegar a la puntuacion objetivo antes que el rival para ganar.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -10,9 +10,9 @@ namespace OsDadinhos
     public class Dado
     {
         Random r = new Random();
-        int numero;
+        int numero, ejeXInicial, ejeYInicial;
         string name;        
-        bool seleccionado, recogido;
+        bool seleccionado, recogido, puntuando;
         PictureBox imagen = new PictureBox();
 
         public Dado():this("", null)
@@ -25,6 +25,9 @@ namespace OsDadinhos
             this.seleccionado = false;
             this.recogido = false;
             numero = r.Next(1, 7);
+            puntuando = false;
+            ejeXInicial = imagen.Location.X;
+            ejeYInicial = imagen.Location.Y;
         }
 
         public void RandomNumber()
@@ -54,6 +57,11 @@ namespace OsDadinhos
                 recogido = true;
         }
 
+        public void SetPosicionInicial()
+        {
+            imagen.SetBounds(ejeXInicial, ejeYInicial, imagen.Size.Width, imagen.Size.Height);
+        }
+
         public int GetNumero()
         {
             return numero;
@@ -62,6 +70,26 @@ namespace OsDadinhos
         public void SetNumero(int numero)
         {
             this.numero = numero;
+        }
+
+        public int GetEjeXInicial()
+        {
+            return ejeXInicial;
+        }
+
+        public void SetEjeXInicial(int ejeXInicial)
+        {
+            this.ejeXInicial = ejeXInicial;
+        }
+
+        public int GetEjeYInicial()
+        {
+            return ejeYInicial;
+        }
+
+        public void SetEjeYInicial(int ejeYInicial)
+        {
+            this.ejeYInicial = ejeYInicial;
         }
 
         public string GetName()
