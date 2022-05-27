@@ -12,6 +12,7 @@ namespace OsDadinhos
 {
     public partial class ComoJugar : Form
     {
+        Color instruccionesColor;
 
         public ComoJugar()
         {
@@ -20,22 +21,15 @@ namespace OsDadinhos
 
         private void ComoJugar_Load(object sender, EventArgs e)
         {
-            
+            instruccionesColor = Color.FromArgb(100, Color.Black);
+            lbInstrucciones.BackColor = instruccionesColor;
+            instruccionesColor = Color.FromArgb(100, Color.LightGray);
+            lbInstruccionesTitulo.BackColor = instruccionesColor;
         }
 
         private void BtSalirInstrucciones(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

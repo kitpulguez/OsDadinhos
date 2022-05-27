@@ -31,10 +31,10 @@ namespace OsDadinhos
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicio));
             this.btUnJugador = new System.Windows.Forms.Button();
-            this.btDosJugadores = new System.Windows.Forms.Button();
             this.btComoJugar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
+            this.btRanking = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btUnJugador
@@ -42,28 +42,18 @@ namespace OsDadinhos
             this.btUnJugador.Location = new System.Drawing.Point(93, 106);
             this.btUnJugador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btUnJugador.Name = "btUnJugador";
-            this.btUnJugador.Size = new System.Drawing.Size(82, 21);
+            this.btUnJugador.Size = new System.Drawing.Size(82, 25);
             this.btUnJugador.TabIndex = 0;
-            this.btUnJugador.Text = "Un jugador";
+            this.btUnJugador.Text = "Jugar";
             this.btUnJugador.UseVisualStyleBackColor = true;
             this.btUnJugador.Click += new System.EventHandler(this.BtUnJugador);
             // 
-            // btDosJugadores
-            // 
-            this.btDosJugadores.Location = new System.Drawing.Point(93, 167);
-            this.btDosJugadores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btDosJugadores.Name = "btDosJugadores";
-            this.btDosJugadores.Size = new System.Drawing.Size(108, 22);
-            this.btDosJugadores.TabIndex = 1;
-            this.btDosJugadores.Text = "Dos jugadores";
-            this.btDosJugadores.UseVisualStyleBackColor = true;
-            // 
             // btComoJugar
             // 
-            this.btComoJugar.Location = new System.Drawing.Point(93, 220);
+            this.btComoJugar.Location = new System.Drawing.Point(93, 158);
             this.btComoJugar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btComoJugar.Name = "btComoJugar";
-            this.btComoJugar.Size = new System.Drawing.Size(114, 22);
+            this.btComoJugar.Size = new System.Drawing.Size(114, 24);
             this.btComoJugar.TabIndex = 2;
             this.btComoJugar.Text = "Cómo jugar";
             this.btComoJugar.UseVisualStyleBackColor = true;
@@ -71,7 +61,7 @@ namespace OsDadinhos
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(93, 269);
+            this.btSalir.Location = new System.Drawing.Point(93, 253);
             this.btSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(82, 22);
@@ -92,24 +82,35 @@ namespace OsDadinhos
             this.lbTitulo.TabIndex = 4;
             this.lbTitulo.Text = "Os dadinhos";
             // 
+            // btRanking
+            // 
+            this.btRanking.Location = new System.Drawing.Point(93, 204);
+            this.btRanking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btRanking.Name = "btRanking";
+            this.btRanking.Size = new System.Drawing.Size(82, 24);
+            this.btRanking.TabIndex = 5;
+            this.btRanking.Text = "Ranking";
+            this.btRanking.UseVisualStyleBackColor = true;
+            this.btRanking.Click += new System.EventHandler(this.BtRanking_Click);
+            // 
             // MenuInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1109, 711);
+            this.ClientSize = new System.Drawing.Size(970, 533);
+            this.Controls.Add(this.btRanking);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btComoJugar);
-            this.Controls.Add(this.btDosJugadores);
             this.Controls.Add(this.btUnJugador);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1125, 750);
+            this.MaximumSize = new System.Drawing.Size(986, 572);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1125, 750);
+            this.MinimumSize = new System.Drawing.Size(986, 572);
             this.Name = "MenuInicio";
             this.Text = "Os Dadinhos";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -121,10 +122,10 @@ namespace OsDadinhos
         #endregion
 
         private System.Windows.Forms.Button btUnJugador;
-        private System.Windows.Forms.Button btDosJugadores;
         private System.Windows.Forms.Button btComoJugar;
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.Button btRanking;
     }
 }
 

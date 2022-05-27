@@ -15,6 +15,21 @@ namespace OsDadinhos
             montonDeDados = new List<Dado>();
         }
 
+        public void HideDados()
+        {
+            foreach (Dado dado in montonDeDados)
+            {
+                dado.GetImagen().Visible = false;
+            }
+        }
+
+        public void ShowDados()
+        {
+            foreach (Dado dado in montonDeDados)
+            {
+                dado.GetImagen().Visible = true;
+            }
+        }
 
         public List<Dado> GetListaDeDados()
         {

@@ -60,6 +60,7 @@ namespace OsDadinhos
             this.cpuDice1 = new System.Windows.Forms.PictureBox();
             this.lbCPUnombreAclarador = new System.Windows.Forms.Label();
             this.lbPlayerNombreAclarador = new System.Windows.Forms.Label();
+            this.BtSalirPartida = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbPuntosPartida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1Dice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1Dice3)).BeginInit();
@@ -79,13 +80,12 @@ namespace OsDadinhos
             // 
             this.pbPuntosPartida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pbPuntosPartida.BackColor = System.Drawing.Color.Transparent;
-            this.pbPuntosPartida.BackgroundImage = global::OsDadinhos.Properties.Resources.pergaminoPuntos;
+            this.pbPuntosPartida.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbPuntosPartida.BackgroundImage")));
             this.pbPuntosPartida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbPuntosPartida.Image = global::OsDadinhos.Properties.Resources.pergaminoPuntos;
-            this.pbPuntosPartida.Location = new System.Drawing.Point(-46, 399);
-            this.pbPuntosPartida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbPuntosPartida.Image = ((System.Drawing.Image)(resources.GetObject("pbPuntosPartida.Image")));
+            this.pbPuntosPartida.Location = new System.Drawing.Point(-136, 528);
             this.pbPuntosPartida.Name = "pbPuntosPartida";
-            this.pbPuntosPartida.Size = new System.Drawing.Size(454, 403);
+            this.pbPuntosPartida.Size = new System.Drawing.Size(600, 537);
             this.pbPuntosPartida.TabIndex = 0;
             this.pbPuntosPartida.TabStop = false;
             // 
@@ -185,6 +185,7 @@ namespace OsDadinhos
             // player1Dice1
             // 
             this.player1Dice1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.player1Dice1.BackColor = System.Drawing.Color.Transparent;
             this.player1Dice1.Image = global::OsDadinhos.Properties.Resources._1_dot;
             this.player1Dice1.Location = new System.Drawing.Point(703, 488);
             this.player1Dice1.Name = "player1Dice1";
@@ -197,6 +198,7 @@ namespace OsDadinhos
             // player1Dice3
             // 
             this.player1Dice3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.player1Dice3.BackColor = System.Drawing.Color.Transparent;
             this.player1Dice3.Image = global::OsDadinhos.Properties.Resources._3_dots;
             this.player1Dice3.Location = new System.Drawing.Point(900, 619);
             this.player1Dice3.Name = "player1Dice3";
@@ -209,6 +211,7 @@ namespace OsDadinhos
             // player1Dice6
             // 
             this.player1Dice6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.player1Dice6.BackColor = System.Drawing.Color.Transparent;
             this.player1Dice6.Image = global::OsDadinhos.Properties.Resources._6_dots;
             this.player1Dice6.Location = new System.Drawing.Point(808, 542);
             this.player1Dice6.Name = "player1Dice6";
@@ -221,6 +224,7 @@ namespace OsDadinhos
             // player1Dice5
             // 
             this.player1Dice5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.player1Dice5.BackColor = System.Drawing.Color.Transparent;
             this.player1Dice5.Image = global::OsDadinhos.Properties.Resources._5_dots;
             this.player1Dice5.Location = new System.Drawing.Point(746, 633);
             this.player1Dice5.Name = "player1Dice5";
@@ -233,6 +237,7 @@ namespace OsDadinhos
             // player1Dice2
             // 
             this.player1Dice2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.player1Dice2.BackColor = System.Drawing.Color.Transparent;
             this.player1Dice2.ErrorImage = null;
             this.player1Dice2.Image = global::OsDadinhos.Properties.Resources._2_dots;
             this.player1Dice2.Location = new System.Drawing.Point(900, 487);
@@ -246,6 +251,7 @@ namespace OsDadinhos
             // player1Dice4
             // 
             this.player1Dice4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.player1Dice4.BackColor = System.Drawing.Color.Transparent;
             this.player1Dice4.Image = global::OsDadinhos.Properties.Resources._4_dots;
             this.player1Dice4.Location = new System.Drawing.Point(629, 597);
             this.player1Dice4.Name = "player1Dice4";
@@ -259,9 +265,10 @@ namespace OsDadinhos
             // 
             this.BtPuntuarYTirar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BtPuntuarYTirar.Enabled = false;
-            this.BtPuntuarYTirar.Location = new System.Drawing.Point(1519, 451);
+            this.BtPuntuarYTirar.Location = new System.Drawing.Point(1688, 601);
+            this.BtPuntuarYTirar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtPuntuarYTirar.Name = "BtPuntuarYTirar";
-            this.BtPuntuarYTirar.Size = new System.Drawing.Size(105, 23);
+            this.BtPuntuarYTirar.Size = new System.Drawing.Size(168, 31);
             this.BtPuntuarYTirar.TabIndex = 14;
             this.BtPuntuarYTirar.Text = "Acumular y tirar";
             this.BtPuntuarYTirar.UseVisualStyleBackColor = true;
@@ -282,9 +289,10 @@ namespace OsDadinhos
             // BtTirar
             // 
             this.BtTirar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.BtTirar.Location = new System.Drawing.Point(1519, 384);
+            this.BtTirar.Location = new System.Drawing.Point(1729, 512);
+            this.BtTirar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtTirar.Name = "BtTirar";
-            this.BtTirar.Size = new System.Drawing.Size(105, 23);
+            this.BtTirar.Size = new System.Drawing.Size(127, 31);
             this.BtTirar.TabIndex = 16;
             this.BtTirar.Text = "Tirar";
             this.BtTirar.UseVisualStyleBackColor = true;
@@ -297,7 +305,7 @@ namespace OsDadinhos
             this.lbBarraSeparadoraEsteticaRival.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbBarraSeparadoraEsteticaRival.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbBarraSeparadoraEsteticaRival.Image = global::OsDadinhos.Properties.Resources.pergaminoPuntos;
-            this.lbBarraSeparadoraEsteticaRival.Location = new System.Drawing.Point(197, 705);
+            this.lbBarraSeparadoraEsteticaRival.Location = new System.Drawing.Point(225, 940);
             this.lbBarraSeparadoraEsteticaRival.Name = "lbBarraSeparadoraEsteticaRival";
             this.lbBarraSeparadoraEsteticaRival.Size = new System.Drawing.Size(28, 37);
             this.lbBarraSeparadoraEsteticaRival.TabIndex = 17;
@@ -310,7 +318,7 @@ namespace OsDadinhos
             this.lbBarraSeparadoraEsteticaTu.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbBarraSeparadoraEsteticaTu.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbBarraSeparadoraEsteticaTu.Image = global::OsDadinhos.Properties.Resources.pergaminoPuntos;
-            this.lbBarraSeparadoraEsteticaTu.Location = new System.Drawing.Point(188, 607);
+            this.lbBarraSeparadoraEsteticaTu.Location = new System.Drawing.Point(215, 809);
             this.lbBarraSeparadoraEsteticaTu.Name = "lbBarraSeparadoraEsteticaTu";
             this.lbBarraSeparadoraEsteticaTu.Size = new System.Drawing.Size(28, 37);
             this.lbBarraSeparadoraEsteticaTu.TabIndex = 18;
@@ -323,7 +331,7 @@ namespace OsDadinhos
             this.lbTusPuntosTotales.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbTusPuntosTotales.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbTusPuntosTotales.Image = global::OsDadinhos.Properties.Resources.pergaminoPuntos;
-            this.lbTusPuntosTotales.Location = new System.Drawing.Point(222, 607);
+            this.lbTusPuntosTotales.Location = new System.Drawing.Point(254, 809);
             this.lbTusPuntosTotales.Name = "lbTusPuntosTotales";
             this.lbTusPuntosTotales.Size = new System.Drawing.Size(50, 37);
             this.lbTusPuntosTotales.TabIndex = 19;
@@ -336,7 +344,7 @@ namespace OsDadinhos
             this.lbRivalPuntosTotales.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbRivalPuntosTotales.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbRivalPuntosTotales.Image = global::OsDadinhos.Properties.Resources.pergaminoPuntos;
-            this.lbRivalPuntosTotales.Location = new System.Drawing.Point(222, 705);
+            this.lbRivalPuntosTotales.Location = new System.Drawing.Point(254, 940);
             this.lbRivalPuntosTotales.Name = "lbRivalPuntosTotales";
             this.lbRivalPuntosTotales.Size = new System.Drawing.Size(50, 37);
             this.lbRivalPuntosTotales.TabIndex = 20;
@@ -347,19 +355,21 @@ namespace OsDadinhos
             this.lbMalaSuerte.AutoSize = true;
             this.lbMalaSuerte.BackColor = System.Drawing.Color.Transparent;
             this.lbMalaSuerte.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbMalaSuerte.Location = new System.Drawing.Point(723, 334);
+            this.lbMalaSuerte.Location = new System.Drawing.Point(826, 445);
             this.lbMalaSuerte.Name = "lbMalaSuerte";
-            this.lbMalaSuerte.Size = new System.Drawing.Size(204, 45);
+            this.lbMalaSuerte.Size = new System.Drawing.Size(252, 54);
             this.lbMalaSuerte.TabIndex = 21;
             this.lbMalaSuerte.Text = "!Mala suerte!";
             // 
             // cpuDice4
             // 
             this.cpuDice4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cpuDice4.BackColor = System.Drawing.Color.Transparent;
             this.cpuDice4.Image = global::OsDadinhos.Properties.Resources._4_dots;
-            this.cpuDice4.Location = new System.Drawing.Point(673, 184);
+            this.cpuDice4.Location = new System.Drawing.Point(769, 245);
+            this.cpuDice4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cpuDice4.Name = "cpuDice4";
-            this.cpuDice4.Size = new System.Drawing.Size(67, 67);
+            this.cpuDice4.Size = new System.Drawing.Size(77, 89);
             this.cpuDice4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpuDice4.TabIndex = 27;
             this.cpuDice4.TabStop = false;
@@ -367,11 +377,13 @@ namespace OsDadinhos
             // cpuDice3
             // 
             this.cpuDice3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cpuDice3.BackColor = System.Drawing.Color.Transparent;
             this.cpuDice3.ErrorImage = null;
             this.cpuDice3.Image = global::OsDadinhos.Properties.Resources._2_dots;
-            this.cpuDice3.Location = new System.Drawing.Point(886, 93);
+            this.cpuDice3.Location = new System.Drawing.Point(1013, 124);
+            this.cpuDice3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cpuDice3.Name = "cpuDice3";
-            this.cpuDice3.Size = new System.Drawing.Size(67, 67);
+            this.cpuDice3.Size = new System.Drawing.Size(77, 89);
             this.cpuDice3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpuDice3.TabIndex = 26;
             this.cpuDice3.TabStop = false;
@@ -379,10 +391,12 @@ namespace OsDadinhos
             // cpuDice5
             // 
             this.cpuDice5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cpuDice5.BackColor = System.Drawing.Color.Transparent;
             this.cpuDice5.Image = global::OsDadinhos.Properties.Resources._5_dots;
-            this.cpuDice5.Location = new System.Drawing.Point(798, 219);
+            this.cpuDice5.Location = new System.Drawing.Point(912, 292);
+            this.cpuDice5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cpuDice5.Name = "cpuDice5";
-            this.cpuDice5.Size = new System.Drawing.Size(67, 67);
+            this.cpuDice5.Size = new System.Drawing.Size(77, 89);
             this.cpuDice5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpuDice5.TabIndex = 25;
             this.cpuDice5.TabStop = false;
@@ -390,10 +404,12 @@ namespace OsDadinhos
             // cpuDice2
             // 
             this.cpuDice2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cpuDice2.BackColor = System.Drawing.Color.Transparent;
             this.cpuDice2.Image = global::OsDadinhos.Properties.Resources._6_dots;
-            this.cpuDice2.Location = new System.Drawing.Point(789, 125);
+            this.cpuDice2.Location = new System.Drawing.Point(902, 167);
+            this.cpuDice2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cpuDice2.Name = "cpuDice2";
-            this.cpuDice2.Size = new System.Drawing.Size(67, 67);
+            this.cpuDice2.Size = new System.Drawing.Size(77, 89);
             this.cpuDice2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpuDice2.TabIndex = 24;
             this.cpuDice2.TabStop = false;
@@ -401,10 +417,12 @@ namespace OsDadinhos
             // cpuDice6
             // 
             this.cpuDice6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cpuDice6.BackColor = System.Drawing.Color.Transparent;
             this.cpuDice6.Image = global::OsDadinhos.Properties.Resources._3_dots;
-            this.cpuDice6.Location = new System.Drawing.Point(922, 227);
+            this.cpuDice6.Location = new System.Drawing.Point(1054, 303);
+            this.cpuDice6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cpuDice6.Name = "cpuDice6";
-            this.cpuDice6.Size = new System.Drawing.Size(67, 67);
+            this.cpuDice6.Size = new System.Drawing.Size(77, 89);
             this.cpuDice6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpuDice6.TabIndex = 23;
             this.cpuDice6.TabStop = false;
@@ -412,10 +430,12 @@ namespace OsDadinhos
             // cpuDice1
             // 
             this.cpuDice1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cpuDice1.BackColor = System.Drawing.Color.Transparent;
             this.cpuDice1.Image = global::OsDadinhos.Properties.Resources._1_dot;
-            this.cpuDice1.Location = new System.Drawing.Point(689, 94);
+            this.cpuDice1.Location = new System.Drawing.Point(787, 125);
+            this.cpuDice1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cpuDice1.Name = "cpuDice1";
-            this.cpuDice1.Size = new System.Drawing.Size(67, 67);
+            this.cpuDice1.Size = new System.Drawing.Size(77, 89);
             this.cpuDice1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpuDice1.TabIndex = 22;
             this.cpuDice1.TabStop = false;
@@ -425,9 +445,9 @@ namespace OsDadinhos
             this.lbCPUnombreAclarador.AutoSize = true;
             this.lbCPUnombreAclarador.BackColor = System.Drawing.Color.LightGray;
             this.lbCPUnombreAclarador.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCPUnombreAclarador.Location = new System.Drawing.Point(448, -1);
+            this.lbCPUnombreAclarador.Location = new System.Drawing.Point(512, -1);
             this.lbCPUnombreAclarador.Name = "lbCPUnombreAclarador";
-            this.lbCPUnombreAclarador.Size = new System.Drawing.Size(97, 54);
+            this.lbCPUnombreAclarador.Size = new System.Drawing.Size(122, 67);
             this.lbCPUnombreAclarador.TabIndex = 28;
             this.lbCPUnombreAclarador.Text = "CPU";
             // 
@@ -435,20 +455,35 @@ namespace OsDadinhos
             // 
             this.lbPlayerNombreAclarador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbPlayerNombreAclarador.AutoSize = true;
-            this.lbPlayerNombreAclarador.BackColor = System.Drawing.Color.LightGray;
+            this.lbPlayerNombreAclarador.BackColor = System.Drawing.Color.LightCyan;
             this.lbPlayerNombreAclarador.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPlayerNombreAclarador.Location = new System.Drawing.Point(448, 738);
+            this.lbPlayerNombreAclarador.Location = new System.Drawing.Point(512, 984);
             this.lbPlayerNombreAclarador.Name = "lbPlayerNombreAclarador";
-            this.lbPlayerNombreAclarador.Size = new System.Drawing.Size(198, 54);
+            this.lbPlayerNombreAclarador.Size = new System.Drawing.Size(245, 67);
             this.lbPlayerNombreAclarador.TabIndex = 29;
             this.lbPlayerNombreAclarador.Text = "Jugador 1";
+            // 
+            // BtSalirPartida
+            // 
+            this.BtSalirPartida.Enabled = false;
+            this.BtSalirPartida.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtSalirPartida.Location = new System.Drawing.Point(853, 512);
+            this.BtSalirPartida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtSalirPartida.Name = "BtSalirPartida";
+            this.BtSalirPartida.Size = new System.Drawing.Size(190, 84);
+            this.BtSalirPartida.TabIndex = 30;
+            this.BtSalirPartida.Text = "SALIR";
+            this.BtSalirPartida.UseVisualStyleBackColor = true;
+            this.BtSalirPartida.Visible = false;
+            this.BtSalirPartida.Click += new System.EventHandler(this.BtSalirPartida_Click);
             // 
             // Partida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OsDadinhos.Properties.Resources.partidaWallpaper;
-            this.ClientSize = new System.Drawing.Size(1684, 791);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.BtSalirPartida);
             this.Controls.Add(this.lbPlayerNombreAclarador);
             this.Controls.Add(this.lbCPUnombreAclarador);
             this.Controls.Add(this.cpuDice4);
@@ -534,5 +569,6 @@ namespace OsDadinhos
         private System.Windows.Forms.PictureBox cpuDice1;
         private System.Windows.Forms.Label lbCPUnombreAclarador;
         public System.Windows.Forms.Label lbPlayerNombreAclarador;
+        private System.Windows.Forms.Button BtSalirPartida;
     }
 }

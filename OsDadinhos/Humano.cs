@@ -14,16 +14,6 @@ namespace OsDadinhos
         public Humano(string nombre, List<Dado> dadosPropios):base(nombre, dadosPropios)
         { }
 
-        /*public override void SeleccionarDado()
-        {
-
-        }*/
-
-        public override void PuntuarYPasar()
-        {
-
-        }
-
         public override string ToString()
         {
             return base.ToString();

@@ -32,45 +32,62 @@ namespace OsDadinhos
             this.lbElegirNombre = new System.Windows.Forms.Label();
             this.tbElegirNombreJugador = new System.Windows.Forms.TextBox();
             this.BtConfirmarNombreJugador = new System.Windows.Forms.Button();
+            this.LbErrorNombre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbElegirNombre
             // 
             this.lbElegirNombre.AutoSize = true;
             this.lbElegirNombre.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbElegirNombre.Location = new System.Drawing.Point(101, 38);
+            this.lbElegirNombre.Location = new System.Drawing.Point(115, 51);
             this.lbElegirNombre.Name = "lbElegirNombre";
-            this.lbElegirNombre.Size = new System.Drawing.Size(200, 31);
+            this.lbElegirNombre.Size = new System.Drawing.Size(248, 40);
             this.lbElegirNombre.TabIndex = 0;
             this.lbElegirNombre.Text = "Escribe tu nombre";
             // 
             // tbElegirNombreJugador
             // 
-            this.tbElegirNombreJugador.Location = new System.Drawing.Point(145, 104);
+            this.tbElegirNombreJugador.Location = new System.Drawing.Point(166, 139);
+            this.tbElegirNombreJugador.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbElegirNombreJugador.Name = "tbElegirNombreJugador";
-            this.tbElegirNombreJugador.Size = new System.Drawing.Size(100, 23);
+            this.tbElegirNombreJugador.Size = new System.Drawing.Size(114, 27);
             this.tbElegirNombreJugador.TabIndex = 1;
             // 
             // BtConfirmarNombreJugador
             // 
-            this.BtConfirmarNombreJugador.Location = new System.Drawing.Point(155, 182);
+            this.BtConfirmarNombreJugador.Location = new System.Drawing.Point(177, 243);
+            this.BtConfirmarNombreJugador.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtConfirmarNombreJugador.Name = "BtConfirmarNombreJugador";
-            this.BtConfirmarNombreJugador.Size = new System.Drawing.Size(75, 23);
+            this.BtConfirmarNombreJugador.Size = new System.Drawing.Size(86, 31);
             this.BtConfirmarNombreJugador.TabIndex = 2;
             this.BtConfirmarNombreJugador.Text = "Aceptar";
             this.BtConfirmarNombreJugador.UseVisualStyleBackColor = true;
             this.BtConfirmarNombreJugador.Click += new System.EventHandler(this.BtConfirmarNombreJugador_Click);
             // 
+            // LbErrorNombre
+            // 
+            this.LbErrorNombre.AutoSize = true;
+            this.LbErrorNombre.Location = new System.Drawing.Point(57, 170);
+            this.LbErrorNombre.Name = "LbErrorNombre";
+            this.LbErrorNombre.Size = new System.Drawing.Size(50, 20);
+            this.LbErrorNombre.TabIndex = 3;
+            this.LbErrorNombre.Text = "label1";
+            this.LbErrorNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // SeleccionarNombre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 258);
+            this.ClientSize = new System.Drawing.Size(494, 344);
+            this.Controls.Add(this.LbErrorNombre);
             this.Controls.Add(this.BtConfirmarNombreJugador);
             this.Controls.Add(this.tbElegirNombreJugador);
             this.Controls.Add(this.lbElegirNombre);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SeleccionarNombre";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Elegir nombre";
+            this.Load += new System.EventHandler(this.SeleccionarNombre_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,5 +98,6 @@ namespace OsDadinhos
         private System.Windows.Forms.Label lbElegirNombre;
         private System.Windows.Forms.TextBox tbElegirNombreJugador;
         private System.Windows.Forms.Button BtConfirmarNombreJugador;
+        private System.Windows.Forms.Label LbErrorNombre;
     }
 }

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OsDadinhos.Dado">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAQAAIAAGAYQIAABAAAAAEQEACEsAAAAAEBQAAABCQ=</HashCode>
+      <FileName>Dado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OsDadinhos.ListaDeDados">
+    <Position X="13.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAASAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ListaDeDados.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="montonDeDados" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OsDadinhos.ListaDePuntuaciones">
+    <Position X="2.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ListaDePuntuaciones.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="puntuaciones" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OsDadinhos.Program">
+    <Position X="0.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OsDadinhos.Puntuaciones" Collapsed="true">
+    <Position X="5.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAABQAAASUAAkAAAAAAAAAARAAAAAQAAAAAAQ=</HashCode>
+      <FileName>Puntuaciones.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OsDadinhos.MenuInicio">
+    <Position X="9.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIgAAAAACAARAAABACAAAACAAASBAAAAAUAACACAAA=</HashCode>
+      <FileName>MenuInicio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ventanaComoJugar" />
+      <Field Name="ventanaSeleccionarNombre" />
+      <Field Name="ventanaRanking" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OsDadinhos.ComoJugar">
+    <Position X="12" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAigCAAIACAACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>ComoJugar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OsDadinhos.TablaPuntuaciones">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAADAAAACAAAGCAAKEAAAgAABYAAgFQAE=</HashCode>
+      <FileName>TablaPuntuaciones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OsDadinhos.Partida">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="d" Type="OsDadinhos.Dado" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="3.839" />
+        <Point X="7.75" Y="2.625" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>SigUHQqAIiACBAYpgCKMBZgiAJQG4AAUyrQIhXwOGCA=</HashCode>
+      <FileName>Partida.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ventanaRanking" />
+      <Field Name="listaDeDadosJugador" />
+      <Field Name="listaDeDadosCPU" />
+      <Field Name="puntuaciones" />
+      <Field Name="d" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OsDadinhos.Humano">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Humano.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OsDadinhos.CPU">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAEIAAEAAAAAAEAQAAAACAAAgAAAAAAoNBAAAAAAA=</HashCode>
+      <FileName>CPU.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OsDadinhos.SeleccionarNombre">
+    <Position X="11" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACIAAKCAAACAQAACAAAAAAAAAAEAMAAAIAA=</HashCode>
+      <FileName>SeleccionarNombre.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ventanaPartida" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OsDadinhos.Jugador">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <AssociationLine Name="dadosPropios" Type="OsDadinhos.Dado" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="5" />
+        <Point X="4.997" Y="5" />
+        <Point X="4.997" Y="0.309" />
+        <Point X="7.656" Y="0.309" />
+        <Point X="7.656" Y="0.625" />
+        <Point X="7.75" Y="0.625" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EABAAARAACQAAACQAAgAAAABAAAAARAAAAAAAAABAEQ=</HashCode>
+      <FileName>Jugador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="dadosPropios" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

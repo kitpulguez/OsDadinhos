@@ -9,16 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace OsDadinhos
 {
     public partial class Partida : Form
     {
+        TablaPuntuaciones ventanaRanking;
         ListaDeDados listaDeDadosJugador;
         ListaDeDados listaDeDadosCPU;
+        public ListaDePuntuaciones puntuaciones;
         Dado d;
-        Jugador j1, j2, cpu;
-        bool turnoTerminado, partidaTerminada, dadoQueNoPuntuaSeleccionado;
+        Jugador j1, cpu;
+        bool turnoTerminado, partidaTerminada, dadoQueNoPuntuaSeleccionado, victoria;
         int puntosTemporales, puntosTemporalesAcumulados, objetivoPuntos;
 
         public Partida()
@@ -26,20 +29,22 @@ namespace OsDadinhos
             InitializeComponent();
             listaDeDadosJugador = new ListaDeDados();
             listaDeDadosCPU = new ListaDeDados();
+            puntuaciones = new ListaDePuntuaciones();
             turnoTerminado = false;
             partidaTerminada = false;
             j1 = new Humano();
-            j2 = new Humano();
             cpu = new CPU();
             puntosTemporales = 0;
             puntosTemporalesAcumulados = 0;
             objetivoPuntos = 2400;
             dadoQueNoPuntuaSeleccionado = false;
             lbMalaSuerte.Text = "";
+            ventanaRanking = new TablaPuntuaciones();
         }
 
         private void Partida_Load(object sender, EventArgs e)
         {
+            InGameTheme();
             RellenarListaDados();
             lbObjetivoPuntuacionPuntos.Text = objetivoPuntos.ToString();
             lbRivalPuntosTotales.Text = 0.ToString();
@@ -49,6 +54,30 @@ namespace OsDadinhos
             foreach (Dado dado in j1.GetListaDeDados())
             {
                 dado.GetImagen().Enabled = false;
+            }
+            listaDeDadosCPU.HideDados();
+            listaDeDadosJugador.HideDados();
+            //j1.SetPuntos(2400); //truquito
+        }
+
+        private void InGameTheme()
+        {
+            try
+            {
+                SoundPlayer mainTheme = new SoundPlayer(@"C:\Users\User\Documents\curso\programacion\proyectoFinal\Media\WindmillPeak.wav");
+                mainTheme.Play();
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("Ruta de acceso incorrecta. Error: " + e);
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                Console.WriteLine("Ruta no valida. Error: " + e);
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Error: " + e);
             }
         }
 
@@ -84,6 +113,9 @@ namespace OsDadinhos
 
         private void BtClickTirar(object sender, EventArgs e)
         {
+            lbMalaSuerte.Text = "";
+            ReposicionamientoDados(j1);
+            listaDeDadosJugador.ShowDados();
             j1.TirarDados();
 
             if (AveriguarSiNingunDadoPuntua(j1))
@@ -108,7 +140,10 @@ namespace OsDadinhos
         {
             if (Convert.ToInt32(lbRivalPuntosTotales.Text) >= objetivoPuntos || Convert.ToInt32(lbTusPuntosTotales.Text) >= objetivoPuntos)
             {
-                Close();
+                if (Convert.ToInt32(lbRivalPuntosTotales.Text) < Convert.ToInt32(lbTusPuntosTotales.Text))
+                    victoria = true;
+
+                partidaTerminada = true;
             }
         }
 
@@ -179,8 +214,16 @@ namespace OsDadinhos
 
             if (CalcularPuntosTemporales(j1) > 0 && !dadoQueNoPuntuaSeleccionado)
             {
-                BtPuntuarYTirar.Enabled = true;
-                BtPuntuarYPasar.Enabled = true;
+                if (!TodosSeleccionados())
+                {
+                    BtPuntuarYTirar.Enabled = true;
+                    BtPuntuarYPasar.Enabled = true;
+                }
+                else
+                {
+                    BtPuntuarYTirar.Enabled = false;
+                    BtPuntuarYPasar.Enabled = true;
+                }
             }
             else
             {
@@ -191,20 +234,53 @@ namespace OsDadinhos
             lbTuPuntuacionTemporal.Text = puntosTemporales.ToString();
         }
 
+        public bool TodosSeleccionados()
+        {
+            bool todos = true;
+
+            foreach (Dado dado in listaDeDadosJugador.GetListaDeDados())
+            {
+                if (!dado.GetRecogido())
+                {
+                    if (!dado.GetSeleccionado())
+                        todos = false;
+                }
+            }
+
+            return todos;
+        }
+
         public void TurnoCPU()
         {
-            ReposicionamientoDados(cpu);
-            turnoTerminado = false;
+            if (!victoria)
+            {
+                turnoTerminado = false;
+                ((CPU)cpu).SetDadosRecogidos(0);
+                listaDeDadosCPU.ShowDados();
 
-            TurnoCPUParte2();
+                ReposicionamientoDados(cpu);
+                Refresh();
 
-            lbRivalPuntosTotales.Text = (Convert.ToInt32(lbRivalPuntosTotales.Text) + Convert.ToInt32(puntosTemporales)).ToString();
-            puntosTemporales = 0;
-            PartidaTerminada();
+                TurnoCPUParte2();
 
-            ReposicionamientoDados(j1);
-            BtTirar.Enabled = true;
-            
+                lbRivalPuntosTotales.Text = (Convert.ToInt32(lbRivalPuntosTotales.Text) + Convert.ToInt32(puntosTemporales)).ToString();
+                puntosTemporales = 0;
+                PartidaTerminada();
+
+                BtTirar.Enabled = true;
+                lbRivalPuntuacionTemporal.Text = 0.ToString();
+            }
+
+            j1.SumarTurno();
+
+            if (partidaTerminada)
+            {
+                TerminarPartida();
+            }
+            else
+            {
+                lbMalaSuerte.Text = "Tu turno";
+            }
         }
 
         public void TurnoCPUParte2()
@@ -213,7 +289,7 @@ namespace OsDadinhos
             {
                 int numeros1 = 0, numeros2 = 0, numeros3 = 0, numeros4 = 0, numeros5 = 0, numeros6 = 0;
                 cpu.TirarDados();
-                Thread.Sleep(1300);
+                Refresh();
 
                 if (!AveriguarSiNingunDadoPuntua(cpu, ref numeros1, ref numeros2, ref numeros3, ref numeros4, ref numeros5, ref numeros6))
                 {
@@ -221,10 +297,10 @@ namespace OsDadinhos
 
                     puntosTemporales += CalcularPuntosTemporales(cpu);
                     lbRivalPuntuacionTemporal.Text = puntosTemporales.ToString();
-                    Thread.Sleep(1300);
+                    Refresh();
 
                     ((CPU)cpu).RecogerDadosSeleccionados();
-                    Thread.Sleep(500);
+                    Refresh();
 
                     if (((CPU)cpu).TirarOtraVez())
                     {
@@ -255,7 +331,8 @@ namespace OsDadinhos
         public void MalaSuerte()
         {
             lbMalaSuerte.Text = "¡Mala suerte!";
-            Thread.Sleep(2500);
+            Refresh();
+            Thread.Sleep(2100);
             lbMalaSuerte.Text = "";
             puntosTemporales = 0;
             puntosTemporalesAcumulados = 0;
@@ -493,6 +570,8 @@ namespace OsDadinhos
                 puntos += 100;
         }
 
+        
+
         // NUMEROS 2
         public void CalcularNumeros2(int numeros2, ref int puntos, ref bool dadoQueNoPuntuaSeleccionado)
         {
@@ -587,11 +666,109 @@ namespace OsDadinhos
         }
         // --------------------------------------------------
 
-        public void RellenarListaDados()    // AÑADIR MAS EXCEPCIONES Y CONTEMPLAR POSIBLE AMPLIACION DE FICHERO MAS ADELANTE
+        public void TerminarPartida()
+        {
+            foreach (Dado dado in j1.GetListaDeDados())
+            {
+                dado.GetImagen().Enabled = false;
+                dado.SetSeleccionado(false);
+            }
+
+            foreach (Dado dado in cpu.GetListaDeDados())
+            {
+                dado.GetImagen().Enabled = false;
+                dado.SetSeleccionado(false);
+            }
+
+            BtSalirPartida.Visible = true;
+            BtSalirPartida.Enabled = true;
+
+            if (victoria)
+            {
+                lbMalaSuerte.Text = lbPlayerNombreAclarador.Text + " GANA!!";
+                RegistrarResultado();
+            }
+            else
+                lbMalaSuerte.Text = "DERROTA";
+        }
+
+        public void RegistrarResultado()
+        {
+            Puntuaciones p;
+            try 
+            {
+                StreamReader scoreReader = new StreamReader("../../../../../Ficheros/puntuacion.txt");
+                string line = null;
+                string[] splitter = null;
+
+                while ((line = scoreReader.ReadLine()) != null)
+                {
+                    splitter = line.Split(";");
+                    p = new Puntuaciones(splitter[0], Convert.ToInt32(splitter[1]), Convert.ToInt32(splitter[2]), Convert.ToDateTime(splitter[3]));
+                    puntuaciones.GetListaPuntuaciones().Add(p);
+                }
+                puntuaciones.GetListaPuntuaciones().Add(new Puntuaciones(j1.GetNombre(), j1.GetPuntos(), j1.GetTurnos()));
+                scoreReader.Close();
+                RellenarFicheroPuntuaciones();                    
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("No se encontro el fichero.");
+            }
+            catch (PathTooLongException)
+            {
+                Console.WriteLine("La longitud de la ruta del fichero es demasiado larga.");
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Error: " + e);
+            }
+        }
+
+        private void RellenarFicheroPuntuaciones()
+        {
+            int counter = 0;
+            puntuaciones.GetListaPuntuaciones().Sort();
+
+            try
+            {
+                using (StreamWriter scoreWriter = new StreamWriter("../../../../../Ficheros/puntuacion.txt"))
+                {
+                    foreach (Puntuaciones puntuacion in puntuaciones.GetListaPuntuaciones())
+                    {
+                        scoreWriter.WriteLine(puntuacion.GetNombre() + ";" + puntuacion.GetPuntos() + ";" + puntuacion.GetTurnos() + ";" + puntuacion.GetFechaVictoria());
+                        counter++;
+                        if (counter == 8)
+                            break;
+                    }
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("No se encontro el fichero.");
+            }
+            catch (PathTooLongException)
+            {
+                Console.WriteLine("La longitud de la ruta del fichero es demasiado larga.");
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Error: " + e);
+            }
+        }
+
+        private void BtSalirPartida_Click(object sender, EventArgs e)
+        {
+            if (victoria)
+                ventanaRanking.ShowDialog();
+            this.Close();
+        }
+
+        public void RellenarListaDados()
         {
             try
             {
-                // Y DE PASO CREAR LOS PERFILES
+                // Y DE PASO CREAR LOS PERFILES1
                 j1 = new Humano(lbPlayerNombreAclarador.Text, listaDeDadosJugador.GetListaDeDados());
                 cpu = new CPU("cpu", listaDeDadosCPU.GetListaDeDados());
 
@@ -610,12 +787,12 @@ namespace OsDadinhos
                         listaDeDadosCPU.GetListaDeDados().Add(d);
                 }                
             }
-            catch (FileNotFoundException e)
+            catch (FileNotFoundException)
             {
                 Console.WriteLine("No se encontro el fichero.");
                 Close();
             }
-            catch (PathTooLongException e)
+            catch (PathTooLongException)
             {
                 Console.WriteLine("La longitud de la ruta del fichero es demasiado larga.");
                 Close();

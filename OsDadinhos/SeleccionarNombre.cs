@@ -22,14 +22,33 @@ namespace OsDadinhos
 
         private void BtConfirmarNombreJugador_Click(object sender, EventArgs e)
         {
-            ventanaPartida.lbPlayerNombreAclarador.Text = GetNombre();
-            ventanaPartida.ShowDialog();
-            Close();
+            if (NombreCorrecto())
+            {
+                this.Hide();
+                ventanaPartida.lbPlayerNombreAclarador.Text = GetNombre();
+                ventanaPartida.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                LbErrorNombre.Text = "El nombre no debe exceder los 19 caracteres ni tener \";\".";
+                LbErrorNombre.ForeColor = Color.Red;
+            }
+        }
+
+        public bool NombreCorrecto()
+        {
+            return GetNombre().Length < 20 && !GetNombre().Contains(";");
         }
 
         public string GetNombre()
         {
             return tbElegirNombreJugador.Text;
+        }
+
+        private void SeleccionarNombre_Load(object sender, EventArgs e)
+        {
+            LbErrorNombre.Text = "";
         }
     }
 }

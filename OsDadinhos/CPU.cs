@@ -35,7 +35,7 @@ namespace OsDadinhos
         {
             foreach (Dado dado in GetListaDeDados())
             {
-                if (dado.GetNumero() == 1)
+                if (dado.GetNumero() == 1 && !dado.GetRecogido())
                     dado.Seleccionar();
             }
         }
@@ -44,7 +44,7 @@ namespace OsDadinhos
         {
             foreach (Dado dado in GetListaDeDados())
             {
-                if (dado.GetNumero() == 2 && numeros2 >= 3)
+                if (dado.GetNumero() == 2 && numeros2 >= 3 && !dado.GetRecogido())
                     dado.Seleccionar();
             }
         }
@@ -53,7 +53,7 @@ namespace OsDadinhos
         {
             foreach (Dado dado in GetListaDeDados())
             {
-                if (dado.GetNumero() == 3 && numeros3 >= 3)
+                if (dado.GetNumero() == 3 && numeros3 >= 3 && !dado.GetRecogido())
                     dado.Seleccionar();
             }
         }
@@ -62,7 +62,7 @@ namespace OsDadinhos
         {
             foreach (Dado dado in GetListaDeDados())
             {
-                if (dado.GetNumero() == 4 && numeros4 >= 3)
+                if (dado.GetNumero() == 4 && numeros4 >= 3 && !dado.GetRecogido())
                     dado.Seleccionar();
             }
         }
@@ -71,7 +71,7 @@ namespace OsDadinhos
         {
             foreach (Dado dado in GetListaDeDados())
             {
-                if (dado.GetNumero() == 5)
+                if (dado.GetNumero() == 5 && !dado.GetRecogido())
                     dado.Seleccionar();
             }
         }
@@ -80,7 +80,7 @@ namespace OsDadinhos
         {
             foreach (Dado dado in GetListaDeDados())
             {
-                if (dado.GetNumero() == 6 && numeros6 >= 3)
+                if (dado.GetNumero() == 6 && numeros6 >= 3 && !dado.GetRecogido())
                     dado.Seleccionar();
             }
         }
@@ -99,7 +99,7 @@ namespace OsDadinhos
             }
             else if (dadosRecogidos == 3)
             {
-                if (r.Next(1, 1001) > 800)
+                if (r.Next(1, 1001) > 700)
                     return true;
             }
             else if (dadosRecogidos == 4)
@@ -125,6 +125,7 @@ namespace OsDadinhos
                 if (dado.GetSeleccionado())
                 {
                     dado.SetSeleccionado(false);
+                    dado.GetImagen().BorderStyle = System.Windows.Forms.BorderStyle.None;
                     dado.Recoger();
                     dadosRecogidos++;
                 }
@@ -135,11 +136,6 @@ namespace OsDadinhos
                     counter += 81;
                 }
             }
-        }
-
-        public override void PuntuarYPasar()
-        {
-
         }
 
         public int GetDadosRecogidos()

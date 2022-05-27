@@ -13,9 +13,7 @@ namespace OsDadinhos
         List<Dado> dadosPropios;
 
         public Jugador() : this("", null)
-        {
-
-        }
+        { }
 
         public Jugador(string nombre, List<Dado> dadosPropios)
         {
@@ -27,7 +25,7 @@ namespace OsDadinhos
 
         public void SumarTurno()
         {
-            turnos++;
+            this.turnos++;
         }
 
         public void TirarDados()
@@ -68,8 +66,6 @@ namespace OsDadinhos
                 }
             }
         }
-
-        public abstract void PuntuarYPasar();
 
         public void SumarPuntos(int puntazos)
         {
